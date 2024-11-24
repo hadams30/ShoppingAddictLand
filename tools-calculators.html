@@ -1,35 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>By Jordin, For Jordin and...You?</title>
+<title>Tools & Calculators</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="stylesheet.css"/>
-
+<link rel="stylesheet" href="stylesheet2.css"/>
+<style>
+    .slide{
+        display:flex;
+        align-items: center;
+    }
+    .savingsBlock{
+        display: flex;
+        align-items: center;
+    }
+</style>
 </head>   
 
 <body>
     <div id="header">
-    <h1> Welcome to My WOrld!$</h1>
-    <h3> Scroll Down for More</h3>
+    <h1> Tools and Calculators</h1>
+    <h2> Subtitle here</h2>
     </div>
 
-    <div id="centerbody">
-        <h2> I am a 1st Year MDC major at Pratt Institute.</h2>
-        <h4> I love art, history, photography, and storytelling which is why I chose this major.</h4>
-        <h5> I hope to become an art curator; preserving and showcasing history for a lifetime.</h5>
-    </div>
+    <div id="centerbody"><!------------------------calc in centerbody------------------------------->
+        <h2>Monthly Budget Calculator</h2>
+        <p>lorem ipsum text here</p>
+        <div class="savingsBlock"><h2>Monthly Balance: $</h2><h2 id="savings">0</h2></div>
+
+        <h2>Income</h2>
+        <div>
+            <label for="income">Monthly Income in dollars: </label>
+            <input type="number" id="income" min="0" step="50" value="0">    
+        </div>
+    
+        <h2>Expenses</h2>
+        <div class="slide">
+            <label for="slideRent">Rent: </label>
+            <input type="range" id="slideRent" min="0" max="6000" value="0">
+            <h3>$</h3><h3 id="slideRentSpend">0</h3>
+        </div>
+    
+        <div class="slide">
+            <label for="slideTransit">Transportation: </label>
+            <input type="range" id="slideTransit" min="0" max="2000" value="0">
+            <h3>$</h3><h3 id="slideTransitSpend">0</h3>
+        </div>
+    
+        <div class="slide">
+            <label for="slideFood">Food: </label>
+            <input type="range" id="slideFood" min="0" max="2000" value="0">
+            <h3>$</h3><h3 id="slideFoodSpend">0</h3>
+        </div>
+        
+        <div class="slide">
+            <label for="slideRetail">Retail/Shopping: </label>
+            <input type="range" id="slideRetail" min="0" max="2000" value="0">
+            <h3>$</h3><h3 id="slideRetailSpend">0</h3>
+        </div>
+    
+        <div class="slide">
+            <label for="slideLeisure">Leisure: </label>
+            <input type="range" id="slideLeisure" min="0" max="2000" value="0">
+            <h3>$</h3><h3 id="slideLeisureSpend">0</h3>
+        </div>
+    
+        <div class="slide">
+            <label for="slideOther">Other Expenses: </label>
+            <input type="range" id="slideOther" min="0" max="2000" value="0">
+            <h3>$</h3><h3 id="slideOtherSpend">0</h3>
+        </div>
+    </div><!------------------------end calc in center body------------------------------->
+
+
+
+
     <div id="leftnav">
-            <ul>
-                <li><a href="https://jordinprice.squarespace.com">My Photography</a></li>
-                <li><a href="https://www.pratt.edu/information/">The School of Information</a></li>
-                <li><a href="https://whitney.org/exhibitions/edges-of-ailey"> My Favorite Museum and Exhibition</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Adrienne_Edwards">A Curator That Inspires Me</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Harlem">Where I'm From</a></li> 
-            </ul>
+        <h2>Tools and tricks</h2>
+        <p>lorem ipsum text here</p>
+        <img src="https://images.rawpixel.com/image_png_400/cHJpdmF0ZS9sci9pbWFnZXMvd2Vic2l0ZS8yMDIyLTA5L2pvYjk2MC0xODctcC5wbmc.png"  alt="placeholder clipart of money" width=400 height=400>
     </div>
+
     <div id="footer">
         <h6> Thank you for scrolling through and learning a bit about me!</h6>
-        <h7> &copy; Jordin Price. 2024</h7>
+        <h7> &copy; Jordin Price, Holly Adams, Tuuli Hoaas. 2024</h7>
     </div>
+
+
+
+
+<!------------------------javascript------------------------------->
+<script>
+
+    const income = document.getElementById("income");
+    income.addEventListener('input',updateRemains);
+
+    const savings = document.getElementById("savings");
+    let remains = 0;
+    let totalExpense = 0;
+
+    function updateRemains(){
+        totalExpense =  Number(slideRent.value) + Number(slideTransit.value) + Number(slideFood.value) + Number(slideRetail.value) + Number(slideLeisure.value) + Number(slideOther.value);
+        incomeValue = income.value;
+        remains = incomeValue - totalExpense;
+        //console.log(totalExpense);
+        savings.textContent = remains;
+
+        if (remains<0){
+            savings.style.color="red";
+        }
+        if (remains==0){
+            savings.style.color="black";
+        }
+        if (remains>0){
+            savings.style.color="green";
+        }
+        //I want to add something here so that whenever it's a negative amount
+        //it says deficit instead of savings
+        //and maybe turns red instead of black 
+        //and maybe if you're above a certain amount of savings it turns green 
+    }
+
+    //const sliders = ['slideRent','slideTransit','slideFood','slideRetail','slideLeisure','slideOther'];
+    //const slideValues = ['slideRentSpend','slideTransitSpend','slideFoodSpend','slideRetailSpend','slideLeisureSpend','slideOtherSpend'];
+   
+    const slideRent = document.getElementById("slideRent");
+    const slideRentSpend = document.getElementById("slideRentSpend");
+    slideRent.oninput = function(){
+        slideRentSpend.textContent=this.value;
+        updateRemains();
+    }
+
+    const slideTransit = document.getElementById("slideTransit");
+    const slideTransitSpend = document.getElementById("slideTransitSpend");
+    slideTransit.oninput = function(){
+        slideTransitSpend.textContent=this.value;
+        updateRemains();
+    }
+
+    const slideFood = document.getElementById("slideFood");
+    const slideFoodSpend = document.getElementById("slideFoodSpend");
+    slideFood.oninput = function(){
+        slideFoodSpend.textContent=this.value;
+        updateRemains();
+    }
+
+    const slideRetail = document.getElementById("slideRetail");
+    const slideRetailSpend = document.getElementById("slideRetailSpend");
+    slideRetail.oninput = function(){
+        slideRetailSpend.textContent=this.value;
+        updateRemains();
+    }
+
+    const slideLeisure = document.getElementById("slideLeisure");
+    const slideLeisureSpend = document.getElementById("slideLeisureSpend");
+    slideLeisure.oninput = function(){
+        slideLeisureSpend.textContent=this.value;            
+        updateRemains();
+    }
+
+    const slideOther = document.getElementById("slideOther");
+    const slideOtherSpend = document.getElementById("slideOtherSpend");
+    slideOther.oninput = function(){
+        slideOtherSpend.textContent=this.value;
+        updateRemains();
+    }
+
+
+</script>
+<!------------------------end javascript------------------------------->
+
+
+
+
+
 </body>
 </html> 
