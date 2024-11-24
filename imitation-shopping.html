@@ -1,34 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>By Jordin, For Jordin and...You?</title>
+<title>Imitation Shopping</title>
 <meta charset="UTF-8">
-<link rel="stylesheet" href="stylesheet.css"/>
+<link rel="stylesheet" href="stylesheet-holly.css"/>
+
+
+<style>
+
+</style>
+
 </head>   
 
 <body>
     <div id="header">
-    <h1> Welcome to My WOrld!$</h1>
-    <h3> Scroll Down for More</h3>
+        <h1>Imitation Shopping</h1>
+        <h2>Subtitle here</h2>
     </div>
 
-    <div id="centerbody">
-        <h2> I am a 1st Year MDC major at Pratt Institute.</h2>
-        <h4> I love art, history, photography, and storytelling which is why I chose this major.</h4>
-        <h5> I hope to become an art curator; preserving and showcasing history for a lifetime.</h5>
-    </div>
     <div id="leftnav">
-            <ul>
-                <li><a href="https://jordinprice.squarespace.com">My Photography</a></li>
-                <li><a href="https://www.pratt.edu/information/">The School of Information</a></li>
-                <li><a href="https://whitney.org/exhibitions/edges-of-ailey"> My Favorite Museum and Exhibition</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Adrienne_Edwards">A Curator That Inspires Me</a></li>
-                <li><a href="https://en.wikipedia.org/wiki/Harlem">Where I'm From</a></li> 
-            </ul>
+        <h2>psychology of online shopping addiction</h2>
+        <div id="research">
+            <p>Chase ball of string eat plants, meow, and throw up because I ate plants going to catch the red dot today going to catch the red dot today. I could pee on this if I had the energy. Chew iPad power cord steal the warm chair right after you get up for purr for no reason leave hair everywhere, decide to want nothing to do with my owner today.</p>
+        </div>
+</div>
+
+    <div id="centerbody">
+        <h2>Guilt-Free Browsing</h2>
+        <div id="shop">
+            <div id="products" class="productList"></div>
+        </div>
     </div>
+    
     <div id="footer">
         <h6> Thank you for scrolling through and learning a bit about me!</h6>
         <h7> &copy; Jordin Price. 2024</h7>
     </div>
+
+
+    <!------------------------javascript------------------------------->
+    <script>
+
+        const productsDiv = document.getElementById('products');
+        fetch('https://dummyjson.com/products')
+            .then(res=>{
+                return res.json();
+            }
+            )
+            //.then(console.log)
+            .then(data => {
+
+            //I would like to make it so it randomly starts at a different product each time the page reloads
+            //or maybe a button to refresh and pull up a list of new products  
+            data.products.forEach(product=>{
+                const oneProduct = document.createElement('div');
+                oneProduct.className = 'oneProduct';
+                oneProduct.innerHTML=`
+                <h2 class="product-title">${product.title}</h2>
+                <h3 class="product-brand">${product.brand}</h3>
+                <img src="${product.thumbnail}" alt="${product.title}" class="product-image">
+                <p>${product.description}</p>
+                <p class="product-price">$${product.price}</p>
+                <p class="product-rating">Rating: ${product.rating}</p>
+            `;
+            productsDiv.appendChild(oneProduct);
+            });
+
+            })
+    </script>
+    <!------------------------end javascript------------------------------->
+
+
 </body>
 </html> 
