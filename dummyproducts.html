@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dummy products</title>
+	<!--<link rel="stylesheet" href="stylesheet.css"/>-->
+    <style>
+        
+
+    </style>
+</head> 
+<body>
+    <h1>Guilt-Free Browsing</h1>
+
+    <div id="shop">
+        <div id="products" class="productList"></div>
+    </div>
+
+
+    <!------------------------javascript------------------------------->
+    <script>
+
+        const productsDiv = document.getElementById('products');
+        fetch('https://dummyjson.com/products')
+            .then(res=>{
+                return res.json();
+            }
+            )
+            //.then(console.log)
+            .then(data => {
+
+            //I would like to make it so it randomly starts at a different product each time the page reloads
+            //or maybe a button to refresh and pull up a list of new products  
+            data.products.forEach(product=>{
+                const oneProduct = document.createElement('div');
+                oneProduct.className = 'oneProduct';
+                oneProduct.innerHTML=`
+                <h2 class="product-title">${product.title}</h2>
+                <h3 class="product-brand">${product.brand}</h3>
+                <img src="${product.thumbnail}" alt="${product.title}" class="product-image">
+                <p>${product.description}</p>
+                <p class="product-price">$${product.price}</p>
+                <p class="product-rating">Rating: ${product.rating}</p>
+            `;
+            productsDiv.appendChild(oneProduct);
+            });
+
+            })
+    </script>
+    <!------------------------end javascript------------------------------->
+    
+
+</body> 
+</html>
