@@ -34,6 +34,8 @@
 
     <div id="centerbody">
         <h2>Guilt-Free Browsing</h2>
+        <h3>some snarky details about what this is for</h3>
+        <p>a testimonial about how getting off of real online shopping and onto this version has saved someone over $2k in the last 3 weeks</p>
         <div id="shop">
             <div id="products" class="productList"></div>
         </div>
@@ -63,10 +65,12 @@
                 const oneProduct = document.createElement('div');
                 oneProduct.className = 'oneProduct';
                 oneProduct.innerHTML=`
-                <h2 class="product-title">${product.title}</h2>
-                <h3 class="product-brand">${product.brand}</h3>
+                <div class="product-header">
+                    <h3 class="product-title">${product.title}</h3>
+                    <h4 class="product-brand">${product.brand}</h4>
+                </div>
                 <img src="${product.thumbnail}" alt="${product.title}" class="product-image">
-                <p>${product.description}</p>
+                <p class="product-description">${product.description}</p>
                 <p class="product-price">$${product.price}</p>
                 <p class="product-rating">Rating: ${product.rating}</p>
             `;

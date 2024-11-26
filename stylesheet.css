@@ -5,6 +5,14 @@
     margin:0px;
   }
 
+html, body {
+    height: 100%;
+}
+
+body {
+
+    min-height: 100vh;
+}
 
 @media all and (min-width: 576px) {
     #centerbody{
@@ -92,35 +100,71 @@ a.headlink{
 /*--------ELEMENTS--------------*/
 
 h1 {
-    font-size:28px;
+    font-size:36px;
     text-align:center;color:blue
 }
 h2{
-    font-size: 14px;
+    font-size: 20px;
     text-align: center;color:darkorange
 }
 h3{
-    font-size:16px;
+    font-size:18px;
     text-align: center;color:lightskyblue
 }
-h4{
+h4,h5{
     font-size:14px;
     text-align: center;color:darkorange
 }
-h5{
-    font-size:14px;
-    text-align:center;color:darkorange
-}
 h6{
-    font-size:16px;
+    font-size:12px;
     text-align:center;color:blue
 }
 img.shrink{
     width:100%;
     height:auto;
 }
+a:visited{
+    color:pink;
+}
+/*--------END ELEMENTS------------------*/
 
-/*--------END ELEMENTS----------*/
+
+/*--------IMITATION SHOPPING FEED----------*/
+h3.product-title{
+    text-align: left;
+    padding-top:10px;
+    padding-left: 10px;
+}
+h4.product-brand{
+    text-align: left;
+    padding-left:10px;
+    padding-bottom:10px;
+}
+div.oneProduct{
+    margin:10px;
+    background-color: darkgray;
+}
+p.product-description{
+    color:whitesmoke;
+    padding:10px;
+}
+#shop{
+    height:fit-content;
+}
+p.product-price{
+    text-align: left;
+    padding-left:10px;
+}
+p.product-rating{
+    text-align: left;
+    padding-left:10px;
+    padding-bottom:10px;
+}
+div.product-header{
+    background-color: black;
+}
+
+/*--------END IMITATION FEED-----------------*/
 
 
 /*--------archive code
@@ -139,9 +183,7 @@ a{
     font-size: 15px;
     color:whitesmoke;
 }
-a:visited{
-    color:pink;
-}
+
 ul{
     line-height: 30px;
     font-size: 15px;
