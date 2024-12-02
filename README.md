@@ -1,3 +1,5 @@
+ALSO -- it's not looking right on mobile yet!! Ah! 
+
 NOTES based on the project desc on Canvas:
 - we need to add bylines on each page describing who wrote what content etc 
 - I added an about section on the home page left nav so we can add little bios
