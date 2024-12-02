@@ -1,4 +1,4 @@
-ALSO -- it's not looking right on mobile yet!! Ah! 
+ALSO -- it's not looking right on mobile yet!! Ah! OH and I want to make a favicon...
 
 NOTES based on the project desc on Canvas:
 - we need to add bylines on each page describing who wrote what content etc 
