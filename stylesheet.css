@@ -18,11 +18,11 @@ body {
     #centerbody{
       width:69%;
       min-height: 500px;
-      max-height: 500px;    
+      height:fit-content;    
     }
     #leftnav{
         min-height: 500px;
-        max-height: 500px;
+        height:fit-content;
         width:30%;
     }
 }
@@ -119,15 +119,56 @@ h6{
     font-size:12px;
     text-align:center;color:blue
 }
+p{
+    padding:5px;
+}
 img.shrink{
     width:100%;
     height:auto;
 }
+img.shrink-left{
+    width:30%;
+    height:auto;
+    float:left;
+    margin:5px;
+}
 a:visited{
     color:pink;
 }
+
+.readmore{
+    align-self: center;
+    padding: 15px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #4c4faf; 
+    color: white;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+.readmore:hover {
+    background-color: #403d8a;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
 /*--------END ELEMENTS------------------*/
 
+/*--------JS BUDGET CALC------------------*/
+.slide{
+    display:flex;
+    align-items: center;
+}
+.savingsBlock{
+    display: flex;
+    align-items: center;
+}
+/*--------END JS BUDGET CALC-------------*/
 
 /*--------IMITATION SHOPPING FEED----------*/
 h3.product-title{
@@ -165,71 +206,3 @@ div.product-header{
 }
 
 /*--------END IMITATION FEED-----------------*/
-
-
-/*--------archive code
-#special{
-    background-color: black;
-    font-weight: bolder;
-    text-decoration: double;
-    color:whitesmoke
-}
-
-.background{
-    background-color: black;
-    color:whitesmoke;
-}
-a{
-    font-size: 15px;
-    color:whitesmoke;
-}
-
-ul{
-    line-height: 30px;
-    font-size: 15px;
-}
-#poem{
-    font-size:14px;
-}
-p{
-    font-size: 14px;
-}
-h2{
-    font-size: 17px;
-    font-weight: lighter;
-    font-style: italic;
-}
-h3{
-    font-size: 17px;
-    font-style: italic;
-}
-#asemic{
-    transform: scale(0.5);
-    margin:0;
-}
-td{
-    border: 1px solid;
-    width:30%;
-    border-color: pink;
-    background-color: black;
-}
-td a{
-    font-size: 11px;
-}
-tr{
-    font-size:10px;
-    background-color: gray;
-}
-th{
-    font-size: 12px;;
-}
-img{
-    width:100%;
-    height:auto;
-}
-.icon{
-    width:40px;
-    height:40px;
-}
-End archive---------*/
-
