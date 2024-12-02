@@ -8,8 +8,8 @@
 
 <body>
     <div id="header">
-        <h1>Online Shopping Detox Title</h1>
-        <h3>Subtitle or catchy phrase</h3>
+        <h1>Welcome to Shopping Addict Land</h1>
+        <h3>We Shopped...Until the Bank Account Dropped</h3>
         <div class="menu">
             <a class="headlink" href="index.html">Home</a>
             <a class="headlink" href=#>Tools & Calculators</a>
@@ -27,57 +27,66 @@
 
     <div id="centerbody"><!------------------------calc in centerbody------------------------------->
         <h2>Monthly Budget Calculator</h2>
-        <p>lorem ipsum text here</p>
-        <div class="savingsBlock"><h2>Monthly Balance: $</h2><h2 id="savings">0</h2></div>
-
-        <h2>Income</h2>
+        <p>In today's fast-paced world of online shopping, it's easy to get swept away by enticing deals and endless options. However, managing your finances is crucial to ensuring that your shopping habits remain enjoyable and sustainable. A well-planned budget not only helps you track your spending but also empowers you to make informed decisions, prioritize your purchases, and avoid the stress of overspending. </p>
+        <p>Start by entering your monthly income below.</p>
+        <p>Next, adjust the sliders to your approximate monthly spending for each category.</p>
+        <p>Your remaining monthly budget will be calculated below.</p>
+        <p>Finally, adjust the sliders more to see how your remaining budget would change if you reduce spending in each of these categories.</p>
+        
+        <div id="calculator">
         <div>
             <label for="income">Monthly Income in dollars: </label>
-            <input type="number" id="income" min="0" step="50" value="0">    
+            <input type="number" class="calcSliders" id="income" min="0" step="50" value="0">    
         </div>
     
-        <h2>Expenses</h2>
+        <h3 id="expenses">Expenses</h3>
         <div class="slide">
             <label for="slideRent">Rent: </label>
-            <input type="range" id="slideRent" min="0" max="6000" value="0">
+            <input type="range" class="calcSliders" id="slideRent" min="0" max="6000" value="0">
             <h3>$</h3><h3 id="slideRentSpend">0</h3>
         </div>
     
         <div class="slide">
             <label for="slideTransit">Transportation: </label>
-            <input type="range" id="slideTransit" min="0" max="2000" value="0">
+            <input type="range" class="calcSliders" id="slideTransit" min="0" max="2000" value="0">
             <h3>$</h3><h3 id="slideTransitSpend">0</h3>
         </div>
     
         <div class="slide">
             <label for="slideFood">Food: </label>
-            <input type="range" id="slideFood" min="0" max="2000" value="0">
+            <input type="range" class="calcSliders" id="slideFood" min="0" max="2000" value="0" step="5">
             <h3>$</h3><h3 id="slideFoodSpend">0</h3>
         </div>
         
         <div class="slide">
             <label for="slideRetail">Retail/Shopping: </label>
-            <input type="range" id="slideRetail" min="0" max="2000" value="0">
+            <input type="range" class="calcSliders" id="slideRetail" min="0" max="2000" value="0" step="5">
             <h3>$</h3><h3 id="slideRetailSpend">0</h3>
         </div>
     
         <div class="slide">
             <label for="slideLeisure">Leisure: </label>
-            <input type="range" id="slideLeisure" min="0" max="2000" value="0">
+            <input type="range" class="calcSliders" id="slideLeisure" min="0" max="2000" value="0" step="5">
             <h3>$</h3><h3 id="slideLeisureSpend">0</h3>
         </div>
     
         <div class="slide">
             <label for="slideOther">Other Expenses: </label>
-            <input type="range" id="slideOther" min="0" max="2000" value="0">
+            <input type="range" class="calcSliders" id="slideOther" min="0" max="2000" value="0">
             <h3>$</h3><h3 id="slideOtherSpend">0</h3>
         </div>
-    </div><!------------------------end calc in center body------------------------------->
+
+        <div class="savingsBlock">
+            <h3>Monthly Balance: $</h3>
+            <h3 id="savings">0</h3>
+        </div>
+        </div>  
+    </div><!------------------------end center body------------------------------->
 
 
     <div id="footer">
-        <h6> Thank you for scrolling through and learning a bit about me!</h6>
-        <h7> &copy; Jordin Price, Holly Adams, Tuuli Hoaas. 2024</h7>
+        <h6> What is your story?</h6>
+        <h7> &copy; Shopping Addict Help 2024</h7>
     </div>
 
 

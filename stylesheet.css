@@ -10,7 +10,7 @@ html, body {
 }
 
 body {
-
+    background-color: lightblue;
     min-height: 100vh;
 }
 
@@ -56,6 +56,7 @@ body {
     float:left;
     height:auto;
     margin: 0;
+    background-color: whitesmoke;
 }
 
 #leftnav{
@@ -101,23 +102,28 @@ a.headlink{
 
 h1 {
     font-size:36px;
-    text-align:center;color:blue
+    text-align:center;
+    color:blue;
 }
 h2{
     font-size: 20px;
-    text-align: center;color:darkorange
+    text-align: center;
+    color:darkorange;
 }
 h3{
     font-size:18px;
-    text-align: center;color:lightskyblue
+    text-align: center;
+    color:lightskyblue;
 }
 h4,h5{
     font-size:14px;
-    text-align: center;color:darkorange
+    text-align: center;
+    color:darkorange;
 }
 h6{
     font-size:12px;
-    text-align:center;color:blue
+    text-align:center;
+    color:blue;
 }
 p{
     padding:5px;
@@ -157,6 +163,15 @@ a:visited{
     box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
 
+#billyVideo{
+    width:100%;
+    display: inline;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+#rscHeader{
+    padding:10px;
+}
 /*--------END ELEMENTS------------------*/
 
 /*--------JS BUDGET CALC------------------*/
@@ -168,9 +183,23 @@ a:visited{
     display: flex;
     align-items: center;
 }
+#expenses{
+    text-align: left;
+}
+#calculator{
+    background-color: bisque;
+    padding:15px;
+}
 /*--------END JS BUDGET CALC-------------*/
 
 /*--------IMITATION SHOPPING FEED----------*/
+#testimonials{
+    background-color: bisque;
+    color:black;
+    margin:10px;
+    padding-top:5px;
+}
+
 h3.product-title{
     text-align: left;
     padding-top:10px;
@@ -181,9 +210,15 @@ h4.product-brand{
     padding-left:10px;
     padding-bottom:10px;
 }
+.product-image{
+    float:left;
+    max-height:250px;
+    width:auto;
+}
 div.oneProduct{
     margin:10px;
     background-color: darkgray;
+    height:350px;
 }
 p.product-description{
     color:whitesmoke;
@@ -191,6 +226,7 @@ p.product-description{
 }
 #shop{
     height:fit-content;
+    background-color: whitesmoke;
 }
 p.product-price{
     text-align: left;
@@ -203,6 +239,27 @@ p.product-rating{
 }
 div.product-header{
     background-color: black;
+}
+
+#doNotBuy{
+    align-self: center;
+    padding: 15px 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    background-color: #af4c4c; 
+    color: white;
+    transition: all 1.5s ease;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+}
+
+#doNotBuy:hover {
+    background-color: #c30c0c;
+    transform: translateY(-1000px);
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
 }
 
 /*--------END IMITATION FEED-----------------*/

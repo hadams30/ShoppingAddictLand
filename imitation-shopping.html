@@ -24,8 +24,8 @@ space to float desc to the right
 
 <body>
     <div id="header">
-        <h1>Online Shopping Detox Title</h1>
-        <h3>Subtitle or catchy phrase</h3>
+        <h1>Welcome to Shopping Addict Land</h1>
+        <h3>We Shopped...Until the Bank Account Dropped</h3>
         <div class="menu">
             <a class="headlink" href="index.html">Home</a>
             <a class="headlink" href="tools-calculators.html">Tools & Calculators</a>
@@ -44,24 +44,43 @@ space to float desc to the right
 
     <div id="centerbody">
         <h2>Guilt-Free Browsing</h2>
-        <h3>some snarky details about what this is for</h3>
-        <p>a testimonial about how getting off of real online shopping and onto this version has saved someone over $2k in the last 3 weeks</p>
+        <h3>Scroll and walk away: The only shopping experience that won't murder your bank account.</h3>
+        <div id="testimonials">
+            <h4>Testimonials:</h4>
+            <p>"Before Stop Shopping!'s Imitation Shopping, I was dropping $500 a month on random things I saw online. Now, I scroll through these dummy products, get my dopamine hit, and walk away with my wallet intact. Last month, I 'bought' zero real things and saved $497.63. My savings account has never looked better, and my impulse-buying demon is STARVING. Thanks, Stop Shopping!" - Jeannine C., Professional Almost-Buyer</p>
+            <p>"I used to online shop so much, my credit card and I cried together on the daily. Now I 'shop' fake products and my bank account is throwing a party. Zero dollars spent, zero regrets!" - Mike T., Reformed Shopaholic</p>    
+        </div>
         <div id="shop">
+            <input id="refreshProducts" class="readmore" type="button" value="Click to shuffle products" onclick="location.reload()"/>
             <div id="products" class="productList"></div>
         </div>
     </div>
     
     <div id="footer">
-        <h6> Thank you for scrolling through and learning a bit about me!</h6>
-        <h7> &copy; Jordin Price. 2024</h7>
+        <h6> What is your story?</h6>
+        <h7> &copy; Shopping Addict Help 2024</h7>
     </div>
 
 
     <!------------------------javascript------------------------------->
     <script>
 
+        //I would like to make it so it randomly starts at a different product each time the page reloads
+        //or maybe a button to refresh and pull up a list of new products  
+
         const productsDiv = document.getElementById('products');
-        fetch('https://dummyjson.com/products')
+
+        function randomProducts(products,count){
+            const shuffled = [...products];
+            //shuffling the products
+            for (let i=shuffled.length-1;i>0;i--){
+                const j= Math.floor(Math.random()*(i+1));
+                [shuffled[i],shuffled[j]]=[shuffled[j],shuffled[i]];
+            }
+            return shuffled.slice(0,count);
+        }
+
+        fetch('https://dummyjson.com/products?limit=0')
             .then(res=>{
                 return res.json();
             }
@@ -69,9 +88,9 @@ space to float desc to the right
             //.then(console.log)
             .then(data => {
 
-            //I would like to make it so it randomly starts at a different product each time the page reloads
-            //or maybe a button to refresh and pull up a list of new products  
-            data.products.forEach(product=>{
+            const randProducts = randomProducts(data.products,20);
+
+            randProducts.forEach(product=>{
                 const oneProduct = document.createElement('div');
                 oneProduct.className = 'oneProduct';
                 oneProduct.innerHTML=`
@@ -83,11 +102,23 @@ space to float desc to the right
                 <p class="product-description">${product.description}</p>
                 <p class="product-price">$${product.price}</p>
                 <p class="product-rating">Rating: ${product.rating}</p>
+                <button id="doNotBuy" type="button">DO NOT BUY!</button>
             `;
             productsDiv.appendChild(oneProduct);
             });
 
             })
+
+        const button = document.getElementById('doNotBuy');
+        button.addEventListener('mouseenter', () => {
+            if (!button.classList.contains('floating')) {
+                button.classList.add('floating');
+                setTimeout(() => {
+                    button.classList.remove('floating');
+            }, 1500); // Match this to your transition duration
+        }
+        });
+
     </script>
     <!------------------------end javascript------------------------------->
 
