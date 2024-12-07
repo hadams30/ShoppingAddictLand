@@ -7,10 +7,12 @@
 
 html, body {
     height: 100%;
+	background-color:darkkhaki;
+
 }
 
 body {
-    background-color: lightblue;
+    background-color:cornsilk;
     min-height: 100vh;
 }
 
@@ -41,7 +43,7 @@ body {
 /*--------PAGE CHUNKS--------*/
 
 #header{
-    background-color:aliceblue;
+    background-color:blanched-almond;
     text-align: center;
 	color: black;	
     margin:0px;
