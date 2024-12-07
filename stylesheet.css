@@ -58,14 +58,14 @@ body {
     float:left;
     height:auto;
     margin: 0;
-    background-color: whitesmoke;
+    background-color: cornsilk;
 }
 
 #leftnav{
     padding:10px;
     float:left;
     margin: 0;
-    background-color: lightblue;
+    background-color: floralwhite;
 }
 
 #footer{
@@ -105,27 +105,27 @@ a.headlink{
 h1 {
     font-size:36px;
     text-align:center;
-    color:blue;
+    color:goldenrod;
 }
 h2{
     font-size: 20px;
     text-align: center;
-    color:darkorange;
+    color:mistyrose;
 }
 h3{
     font-size:18px;
     text-align: center;
-    color:lightskyblue;
+    color:FF748B;
 }
 h4,h5{
     font-size:14px;
     text-align: center;
-    color:darkorange;
+    color:mistyrose;
 }
 h6{
     font-size:12px;
     text-align:center;
-    color:blue;
+    color:FF748B;
 }
 p{
     padding:5px;
@@ -141,7 +141,7 @@ img.shrink-left{
     margin:5px;
 }
 a:visited{
-    color:pink;
+    color:grey;
 }
 
 .readmore{
@@ -189,7 +189,7 @@ a:visited{
     text-align: left;
 }
 #calculator{
-    background-color: bisque;
+    background-color:E4F1AC;
     padding:15px;
 }
 /*--------END JS BUDGET CALC-------------*/
