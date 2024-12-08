@@ -196,7 +196,7 @@ a:visited{
 
 /*--------IMITATION SHOPPING FEED----------*/
 #testimonials{
-    background-color:lavenderblush;
+    background-color:whitesmoke;
     color:red;
     margin:10px;
     padding-top:5px;
@@ -219,11 +219,11 @@ h4.product-brand{
 }
 div.oneProduct{
     margin:10px;
-    background-color:linen;
+    background-color:snow;
     height:350px;
 }
 p.product-description{
-    color:whitesmoke;
+    color:blue;
     padding:10px;
 }
 #shop{
