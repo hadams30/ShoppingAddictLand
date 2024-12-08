@@ -7,7 +7,7 @@
 
 html, body {
     height: 100%;
-	background-color:darkkhaki;
+	background-color:ghostwhite;
 
 }
 
@@ -110,7 +110,7 @@ h1 {
 h2{
     font-size: 20px;
     text-align: center;
-    color:mistyrose;
+    color:paleviolet red;
 }
 h3{
     font-size:18px;
@@ -120,12 +120,12 @@ h3{
 h4,h5{
     font-size:14px;
     text-align: center;
-    color:mistyrose;
+    color:plum;
 }
 h6{
     font-size:12px;
     text-align:center;
-    color:FF748B;
+    color:indianred;
 }
 p{
     padding:5px;
@@ -189,15 +189,15 @@ a:visited{
     text-align: left;
 }
 #calculator{
-    background-color:E4F1AC;
+    background-color:seashell;
     padding:15px;
 }
 /*--------END JS BUDGET CALC-------------*/
 
 /*--------IMITATION SHOPPING FEED----------*/
 #testimonials{
-    background-color: bisque;
-    color:black;
+    background-color:lavenderblush;
+    color:red;
     margin:10px;
     padding-top:5px;
 }
@@ -219,7 +219,7 @@ h4.product-brand{
 }
 div.oneProduct{
     margin:10px;
-    background-color: darkgray;
+    background-color:linen;
     height:350px;
 }
 p.product-description{
@@ -240,7 +240,7 @@ p.product-rating{
     padding-bottom:10px;
 }
 div.product-header{
-    background-color: black;
+    background-color:aliceblue;
 }
 
 #doNotBuy{
@@ -249,8 +249,8 @@ div.product-header{
     font-weight: bold;
     text-transform: uppercase;
     text-align: center;
-    background-color: #af4c4c; 
-    color: white;
+    background-color:red; 
+    color:white;
     transition: all 1.5s ease;
     border: none;
     border-radius: 8px;
@@ -259,7 +259,7 @@ div.product-header{
 }
 
 #doNotBuy:hover {
-    background-color: #c30c0c;
+    background-color:red;
     transform: translateY(-1000px);
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.15);
 }
