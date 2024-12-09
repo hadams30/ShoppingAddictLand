@@ -7,7 +7,7 @@
 
 html, body {
     height: 100%;
-	background-color:ghostwhite;
+	background-color:rgb(217, 250, 217);
 
 }
 
@@ -43,7 +43,7 @@ body {
 /*--------PAGE CHUNKS--------*/
 
 #header{
-    background-color:blanched-almond;
+    background-color:rgb(217, 250, 217);
     text-align: center;
 	color: black;	
     margin:0px;
@@ -118,7 +118,7 @@ h2{
 h3{
     font-size:18px;
     text-align: center;
-    color:FF748B;
+    color:#FF748B;
     font-family: "Gill Sans", sans-serif;
 }
 h4,h5{
